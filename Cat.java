@@ -1,12 +1,18 @@
 public class Cat extends Pet{
     String name;
+    int distance;
+
+    public Cat(int distanceToHuman) {
+        distance = distanceToHuman;
+    }
 
     @Override
     void voice() {
-        catVoice();
+        catReaction();
     }
 
-    void catVoice() {
-        System.out.println("Meow");
+    void catReaction() {
+        distance -= 3;
+        System.out.println("Meow, " + distance);
     }
 }
