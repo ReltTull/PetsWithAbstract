@@ -1,6 +1,5 @@
-public class Cat extends Pet{
-    String name;
-    int distance;
+public class Cat extends Pet implements Comparable<Pet>{
+//    int distance;
 
     public Cat(int distanceToHuman) {
         distance = distanceToHuman;
@@ -14,5 +13,10 @@ public class Cat extends Pet{
     void catReaction() {
         distance -= 3;
         System.out.println("Meow, " + distance);
+    }
+
+    @Override
+    void getInfo() {
+        System.out.println("Cat, " + distance);
     }
 }
