@@ -10,7 +10,7 @@ public class Human {
     void call() {
         System.out.println("*calling*");
         for (Pet pet: pets) {
-            pet.voice();
+            pet.reaction();
         }
     }
 
