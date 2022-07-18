@@ -6,14 +6,20 @@ public class Cat extends Pet implements Comparable<Pet>{
     }
 
     @Override
-    void voice() {
-        catReaction();
+    void reaction() {
+        voice();
+        distance -= 3;
     }
 
-    void catReaction() {
-        distance -= 3;
-        System.out.println("Meow, " + distance);
+    @Override
+    void voice() {
+        System.out.println("Meow");
     }
+
+//    void catReaction() {
+//
+//
+//    }
 
     @Override
     void getInfo() {
